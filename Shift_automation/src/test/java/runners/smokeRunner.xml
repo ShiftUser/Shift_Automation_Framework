@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Shift Suite">
+    <test name="Shift TestCases">
+
+        <classes>
+            <class name="Shift_Test.Shift_Browser_TestCase"/>
+            <class name="Shift_Test.Shift_WinAppdriverTestCase"/>
+        </classes>
+
+    </test>
+</suite>
