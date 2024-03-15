@@ -10,7 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.ui.context.Theme;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -29,6 +31,7 @@ public class Shift_WinAppdriverTestCase extends BaseTest
         logger = extent.createTest(testMethod.getName());
         logger.assignCategory("Test 2");
         logger.assignCategory("Test 3");
+        logger.assignAuthor("Shift");
         try {
             Thread.sleep(5000);
             logger.log(Status.INFO, "Launching Shift Application");
@@ -114,6 +117,7 @@ public class Shift_WinAppdriverTestCase extends BaseTest
 
         logger = extent.createTest(testMethod.getName());
         logger.assignCategory("Test 3");
+        logger.assignAuthor("Shift");
 
         try {
             Thread.sleep(7000);
@@ -271,6 +275,7 @@ Robot robot= new Robot();
     }
 
 
+
     @Test(priority = 4)
     public void Adding_New_Messenger_Application(Method testMethod) throws InterruptedException {
         logger = extent.createTest(testMethod.getName());
@@ -298,32 +303,38 @@ Robot robot= new Robot();
             Thread.sleep(1000);
             logger.log(Status.INFO,"Click on Add Application button");
             windowsDriver.findElementByName("Add Application").click();
-            Thread.sleep(2000);
-            windowsDriver.switchTo().activeElement().sendKeys("Messenger");
             Thread.sleep(5000);
+            windowsDriver.findElementByName("All").click();
+            Thread.sleep(3000);
+            Actions actions = new Actions(windowsDriver);
+            actions.sendKeys(Keys.TAB).perform();
+            actions.sendKeys("Messenger").perform();
+            Thread.sleep(8000);
             windowsDriver.findElementByName("Messenger").click();
             Thread.sleep(5000);
             windowsDriver.findElement(By.xpath("//Edit[@AutomationId='name'][@Name='Account name']")).sendKeys("Test_Messenger");
             Thread.sleep(1000);
             windowsDriver.findElementByName("Save").click();
             Thread.sleep(3000);
-            Actions actions = new Actions(windowsDriver);
-            actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).perform();
 
+            actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).perform();
             actions.sendKeys("forworkfsb@gmail.com").perform();
 
-           // windowsDriver.findElement(By.xpath("//Edit[@AutomationId='email'][@Name='Email or phone number']")).sendKeys("forworkfsb@gmail.com");
+            // windowsDriver.findElement(By.xpath("//Edit[@AutomationId='email'][@Name='Email or phone number']")).sendKeys("forworkfsb@gmail.com");
             Thread.sleep(1000);
             windowsDriver.findElementByName("Password").click();
             Thread.sleep(1000);
             windowsDriver.findElementByName("Password").sendKeys("Fa123456789");
             Thread.sleep(2000);
             Robot robot = new Robot();
+
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
-            Thread.sleep(5000);
+            Thread.sleep(8000);
+            actions.sendKeys(Keys.TAB).perform();
+            Thread.sleep(2000);
             windowsDriver.findElementByName("Chats").click();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             if(windowsDriver.findElementByName("Chats").isDisplayed()){
                 logger.log(Status.INFO,"successfully login to messenger");
                 System.out.println("successfully login to messenger");
@@ -340,13 +351,13 @@ Robot robot= new Robot();
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
             Thread.sleep(3000);
-           WinDriver.stop();
+            WinDriver.stop();
 
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
+   }
+}
 
 
 

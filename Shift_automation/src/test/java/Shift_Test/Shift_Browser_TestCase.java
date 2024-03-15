@@ -25,6 +25,8 @@ public class Shift_Browser_TestCase extends BaseTest
         try {
             logger = extent.createTest(testMethod.getName());
             logger.assignCategory("Test 1");
+            logger.assignAuthor("Shift");
+
             logger.log(Status.INFO, "Launching" +
                     " Chrome Browser");
             System.setProperty("webdriver.chrome.driver",Constants.chromeDriverPath);
