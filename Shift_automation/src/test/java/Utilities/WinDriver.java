@@ -11,7 +11,7 @@ public interface WinDriver {
         {
             Desktop desktop = Desktop.getDesktop();
 
-            File file = new File("C:\\Program Files\\Windows Application Driver\\WinAppDriver.exe");
+            File file = new File(Constants.winAppDriverPath);
 
             /* Check if there is support for Desktop or not */
             if(!Desktop.isDesktopSupported())

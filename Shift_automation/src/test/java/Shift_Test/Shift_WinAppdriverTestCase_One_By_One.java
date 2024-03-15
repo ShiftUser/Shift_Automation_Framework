@@ -1,5 +1,6 @@
 package Shift_Test;
 
+import Utilities.Constants;
 import Utilities.WinDriver;
 import com.aventstack.extentreports.Status;
 import io.appium.java_client.windows.WindowsDriver;
@@ -32,7 +33,7 @@ public class Shift_WinAppdriverTestCase_One_By_One extends BaseTest
             Thread.sleep(5000);
             logger.log(Status.INFO, "Launching Shift Application");
             DesiredCapabilities cap = new DesiredCapabilities();
-            cap.setCapability("app", "C:\\Users\\TearsInRain\\AppData\\Local\\Programs\\Shift\\shift.exe");
+            cap.setCapability("app", Constants.shiftApplicationPath);
             cap.setCapability("platformName", "Windows");
             cap.setCapability("deviceName", "WindowsPC");
             WinDriver.start();
@@ -60,7 +61,7 @@ public class Shift_WinAppdriverTestCase_One_By_One extends BaseTest
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyPress(KeyEvent.VK_ENTER);
             Thread.sleep(3000);
-            logger.log(Status.INFO, "Providing Email in the Email textbox");
+            logger.log(Status.INFO, "Providing Email in the Email textBox");
             windowsDriver.findElementByName("Email or phone").click();
             Thread.sleep(1000);
             windowsDriver.findElementByName("Email or phone").sendKeys("Forworkfsb@gmail.com");
@@ -117,7 +118,7 @@ public class Shift_WinAppdriverTestCase_One_By_One extends BaseTest
             Thread.sleep(7000);
             logger.log(Status.INFO, "Launching Shift Application");
             DesiredCapabilities cap = new DesiredCapabilities();
-            cap.setCapability("app", "C:\\Users\\TearsInRain\\AppData\\Local\\Programs\\Shift\\shift.exe");
+            cap.setCapability("app", Constants.shiftApplicationPath);
             cap.setCapability("platformName", "Windows");
             cap.setCapability("deviceName", "WindowsPC");
             WinDriver.start();
@@ -191,7 +192,7 @@ public class Shift_WinAppdriverTestCase_One_By_One extends BaseTest
             Thread.sleep(5000);
             logger.log(Status.INFO, "Launching Shift Application");
             DesiredCapabilities cap = new DesiredCapabilities();
-            cap.setCapability("app", "C:\\Users\\TearsInRain\\AppData\\Local\\Programs\\Shift\\shift.exe");
+            cap.setCapability("app", Constants.shiftApplicationPath);
             cap.setCapability("platformName", "Windows");
             cap.setCapability("deviceName", "WindowsPC");
             WinDriver.start();
@@ -294,7 +295,7 @@ public class Shift_WinAppdriverTestCase_One_By_One extends BaseTest
         try {
             Thread.sleep(10000);
             DesiredCapabilities cap = new DesiredCapabilities();
-            cap.setCapability("app", "C:\\Users\\TearsInRain\\AppData\\Local\\Programs\\Shift\\shift.exe");
+            cap.setCapability("app", Constants.shiftApplicationPath);
             cap.setCapability("platformName", "Windows");
             cap.setCapability("deviceName", "WindowsPC");
             WinDriver.start();

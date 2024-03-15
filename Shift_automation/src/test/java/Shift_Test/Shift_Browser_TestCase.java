@@ -27,7 +27,7 @@ public class Shift_Browser_TestCase extends BaseTest
             logger.assignCategory("Test 1");
             logger.log(Status.INFO, "Launching" +
                     " Chrome Browser");
-            System.setProperty("webdriver.chrome.driver","C:\\Babu\\chromedriver-win64\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",Constants.chromeDriverPath);
             WebDriver driver =  new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
@@ -96,7 +96,7 @@ public class Shift_Browser_TestCase extends BaseTest
             logger.assignCategory("Test 1");
 
             logger.log(Status.INFO, "Visiting to Download folder in local system/drive");
-            String filePath = "C:\\Users\\TearsInRain\\Downloads";
+            String filePath = Constants.fileDownloadPath;
             File downloadFolder = new File(filePath);
             if (downloadFolder.exists() && downloadFolder.isDirectory()) {
                 // List files in the download folder
