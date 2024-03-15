@@ -60,7 +60,7 @@ public class Shift_WinAppdriverTestCase extends BaseTest
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyPress(KeyEvent.VK_ENTER);
             Thread.sleep(3000);
-            logger.log(Status.INFO, "Providing Email in the Email textbox");
+            logger.log(Status.INFO, "Providing Email in the Email textBox");
             windowsDriver.findElementByName("Email or phone").click();
             Thread.sleep(1000);
             windowsDriver.findElementByName("Email or phone").sendKeys("Forworkfsb@gmail.com");
