@@ -2,6 +2,7 @@ package Shift_Test;
 
 import Utilities.Constants;
 import com.aventstack.extentreports.Status;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,9 +20,8 @@ import java.util.concurrent.TimeUnit;
 public class Shift_Browser_TestCase extends BaseTest
 {
     SoftAssert softAssert = new SoftAssert(); //This is a global declaration
-
     @Test(priority = 1)
-    public void Opening_Chrome_Browser_and_visitingShiftURL(Method testMethod) throws InterruptedException {
+    public void Opening_Chrome_Browser_and_visitingShiftUR2L(Method testMethod) throws InterruptedException {
         try {
             logger = extent.createTest(testMethod.getName());
             logger.assignCategory("Test 1");
@@ -29,7 +29,7 @@ public class Shift_Browser_TestCase extends BaseTest
 
             logger.log(Status.INFO, "Launching" +
                     " Chrome Browser");
-            System.setProperty("webdriver.chrome.driver",Constants.chromeDriverPath);
+            WebDriverManager.chromedriver().setup();
             WebDriver driver =  new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
@@ -44,6 +44,7 @@ public class Shift_Browser_TestCase extends BaseTest
                 softAssert.assertTrue(true);
             } else {
                 logger.log(Status.INFO, "Incorrect Shift url");
+
                 System.out.println("Pop up msg is Wrong. Please verify  url ");
                 softAssert.assertFalse(true, "Pop up msg is Wrong. Please verify url ");
             }

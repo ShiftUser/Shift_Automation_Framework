@@ -7,7 +7,6 @@
     <groupId>org.example</groupId>
     <artifactId>Shift</artifactId>
     <version>12.1</version>
-
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
@@ -40,12 +39,21 @@
             <scope>provided</scope>
         </dependency>
 
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+
 
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -95,6 +103,9 @@
 
 
     </dependencies>
+
+
+
 
 
 

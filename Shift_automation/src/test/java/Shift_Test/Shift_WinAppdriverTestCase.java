@@ -321,7 +321,7 @@ Robot robot= new Robot();
             windowsDriver.findElement(By.xpath("//Edit[@AutomationId='name'][@Name='Account name']")).sendKeys("Test_Messenger");
             Thread.sleep(1000);
             windowsDriver.findElementByName("Save").click();
-            Thread.sleep(3000);
+            Thread.sleep(8000);
 
             actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).perform();
             actions.sendKeys("forworkfsb@gmail.com").perform();
