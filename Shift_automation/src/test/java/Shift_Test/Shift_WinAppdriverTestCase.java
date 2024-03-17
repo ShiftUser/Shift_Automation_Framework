@@ -141,7 +141,37 @@ public class Shift_WinAppdriverTestCase extends BaseTest
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
+            Thread.sleep(5000);
+            Robot robot  = new Robot();
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_L);
+            robot.keyRelease(KeyEvent.VK_L);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            // Wait for the context menu to appear and select an option (e.g., by pressing tab)
+            Thread.sleep(2000);
 
+            //This send Gmail.com to the search bar
+            robot.keyPress(KeyEvent.VK_G);
+            robot.keyRelease(KeyEvent.VK_G);
+            robot.keyPress(KeyEvent.VK_M);
+            robot.keyRelease(KeyEvent.VK_M);
+            robot.keyPress(KeyEvent.VK_A);
+            robot.keyRelease(KeyEvent.VK_A);
+            robot.keyPress(KeyEvent.VK_I);
+            robot.keyRelease(KeyEvent.VK_I);
+            robot.keyPress(KeyEvent.VK_L);
+            robot.keyRelease(KeyEvent.VK_L);
+            robot.keyPress(KeyEvent.VK_PERIOD);
+            robot.keyRelease(KeyEvent.VK_PERIOD);
+            robot.keyPress(KeyEvent.VK_C);
+            robot.keyRelease(KeyEvent.VK_C);
+            robot.keyPress(KeyEvent.VK_O);
+            robot.keyRelease(KeyEvent.VK_O);
+            robot.keyPress(KeyEvent.VK_M);
+            robot.keyRelease(KeyEvent.VK_M);
+            Thread.sleep(2000);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
 
             logger.log(Status.INFO, "Checking for element such as Search mail/ Gmail Main Menu");
             WebDriverWait wait = new WebDriverWait(windowsDriver, 30);
