@@ -52,7 +52,11 @@ public class Shift_WinAppdriverTestCase extends BaseTest
             Thread.sleep(5000);
             /* windowsDriver.findElement(By.xpath("//Pane[@ClassName='#32769'][@Name='Desktop 1']//Pane[@ClassName='Chrome_WidgetWin_1'][@Name='Gmail - Shift']//Document[@ClassName='Chrome_RenderWidgetHostHWND'][@Name='Shift']")).click();*/
             logger.log(Status.INFO, "Clicking on Privacy Policy Checkbox");
-            windowsDriver.findElement(By.xpath("//CheckBox[starts-with(@Name,'Privacy Policy and Terms of Use I agree to the terms and conditi')][@AutomationId='checkbox-accept-terms-checkbox']")).click();
+           WebElement clickCheckBox= windowsDriver.findElement(By.xpath("//CheckBox[starts-with(@Name,'Privacy Policy and Terms of Use I agree to the terms and conditi')][@AutomationId='checkbox-accept-terms-checkbox']"));
+            //WebElement clickCheckBox = windowsDriver.findElementByName("Privacy Policy and Terms of Use I agree to the terms and conditions of this Privacy Policy , Terms of Use , EULA and to receive email communications.");
+            Actions actions = new Actions(windowsDriver);
+            actions.click(clickCheckBox).perform();
+            // windowsDriver.findElementByName("Privacy Policy and Terms of Use I agree to the terms and conditions of this Privacy Policy , Terms of Use , EULA and to receive email communications.").click();
             Thread.sleep(2000);
             logger.log(Status.INFO, "Clicking on Sign in with Google");
             windowsDriver.findElementByName("Sign in with Google").click();
@@ -65,6 +69,8 @@ public class Shift_WinAppdriverTestCase extends BaseTest
             robot.keyPress(KeyEvent.VK_ENTER);
             Thread.sleep(3000);
             logger.log(Status.INFO, "Providing Email in the Email textBox");
+            windowsDriver.findElementByName("Email or phone").clear();
+            Thread.sleep(2000);
             windowsDriver.findElementByName("Email or phone").click();
             Thread.sleep(1000);
             windowsDriver.findElementByName("Email or phone").sendKeys("Forworkfsb@gmail.com");
