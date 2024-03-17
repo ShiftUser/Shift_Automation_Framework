@@ -52,7 +52,8 @@ Hola, you have successfully run the project. You can check the reports in Shift 
 
 3.	**Second Case (Entirely run the project):-**
 -  Now the second case, If you want to run the entire project at once. Make sure Shift is not installed in your system and have no folders related to it also clear your temp files from your local system. If you have followed the first case of running the project i.e. Run the class one by one then you have to also make sure that before uninstalling Shift application , you logout from everywhere in shift, delete all the workspaces, delete the messenger application  created by test automation. If you don’t delete test case will not execute as expected and may fail. All fault to you 😊
-- You can run the project now once the above steps are followed. Open your pom.xml . To run from pom.xml . Go to Maven > run maven clean > make sure the Build is success> run maven test and wait the execution to get started.
+- then Navigate to smokeRunner.xml. Right click on smokeRunner.xml and Run it. and wait the execution to get started.
+  
 Hola your test execution is successful, You can again check the reports in Shift reports folder which is generated in the project location with the date and time stamp.
 
 **Also, I am keeping an extra class for my Interview Demo Purpose i.e. “Shift_WinAppdriverTestCase_One_By_One.java”. Please do not touch 😊 -**
