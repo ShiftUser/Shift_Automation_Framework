@@ -4,9 +4,7 @@ import Utilities.Constants;
 import Utilities.WinDriver;
 import com.aventstack.extentreports.Status;
 import io.appium.java_client.windows.WindowsDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -98,10 +96,10 @@ public class Shift_WinAppdriverTestCase extends BaseTest
             Thread.sleep(2000);
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
-            Thread.sleep(3000);
+            Thread.sleep(8000);
             logger.log(Status.INFO, "Clicking on Continue and Allow Button");
-            windowsDriver.findElementByName("Continue").click();
-            Thread.sleep(3000);
+             windowsDriver.findElementByName("Continue").click();
+            Thread.sleep(6000);
             windowsDriver.findElementByName("Allow").click();
             Thread.sleep(12000);
             robot.keyPress(KeyEvent.VK_CONTROL);//go to version page
