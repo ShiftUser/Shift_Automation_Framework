@@ -88,11 +88,11 @@ public class Shift_WinAppdriverTestCase extends BaseTest
             Thread.sleep(3000);
             logger.log(Status.INFO, "Providing Password");
             windowsDriver.findElementByName("Enter your password").sendKeys("Fa0880251125!");
-            Thread.sleep(2000);
+            Thread.sleep(3000);
             logger.log(Status.INFO, "Clicking on Next ");
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
             Thread.sleep(2000);
@@ -100,22 +100,11 @@ public class Shift_WinAppdriverTestCase extends BaseTest
             robot.keyRelease(KeyEvent.VK_ENTER);
             Thread.sleep(3000);
             logger.log(Status.INFO, "Clicking on Continue and Allow Button");
-           // windowsDriver.findElementByName("Continue").click();
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            Thread.sleep(1000);
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            Thread.sleep(1000);
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            Thread.sleep(1000);
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.keyRelease(KeyEvent.VK_ENTER);
+            windowsDriver.findElementByName("Continue").click();
             Thread.sleep(3000);
             windowsDriver.findElementByName("Allow").click();
             Thread.sleep(12000);
-            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_CONTROL);//go to version page
             robot.keyPress(KeyEvent.VK_COMMA);
             robot.keyRelease(KeyEvent.VK_COMMA);
             robot.keyRelease(KeyEvent.VK_CONTROL);
