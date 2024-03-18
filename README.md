@@ -51,11 +51,14 @@ Hi My name is Supattra Boonchalee🖐 , I have created an Automation Framework f
 
 ### Reports
 Please note once the execution is successful the report will be generated along with a date and time stamp in the project directory This is how the report will look like:
+
 ![Report screenshot 1 ](https://github.com/ShiftUser/Shift_Automation_Framework/blob/master/Shift_automation/src/test/resources/ScreenShortReport1.PNG)
 
 
 ### Execution Sample
-[Recorded Execution video](https://www.veed.io/view/679f6f3d-4ff5-4e62-a045-2ec82aab765c?panel=share)
+[Recorded Execution video](https://github.com/ShiftUser/Shift_Automation_Framework/blob/master/Shift_automation/src/test/resources/RunningTest.mp4)
+
+[SetUp video](https://www.loom.com/share/9802325dce8c4ea4935c1c6f66c490b3?sid=983dc7b9-3f00-4e51-8d5a-48f052d36aae)
 
 [Test case status](https://github.com/ShiftUser/Shift_Automation_Framework/blob/master/Shift_automation/src/test/resources/TC_Shift_3_15_2024.xlsx)
 
