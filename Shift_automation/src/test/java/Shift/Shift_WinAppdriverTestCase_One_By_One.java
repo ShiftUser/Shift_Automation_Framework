@@ -1,4 +1,4 @@
-package Shift_Test;
+package Shift;
 
 import Utilities.Constants;
 import Utilities.WinDriver;

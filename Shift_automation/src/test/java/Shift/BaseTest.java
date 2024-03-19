@@ -1,4 +1,4 @@
-package Shift_Test;
+package Shift;
 
 import Utilities.Constants;
 import com.aventstack.extentreports.ExtentReports;
@@ -9,7 +9,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.appium.java_client.windows.WindowsDriver;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;

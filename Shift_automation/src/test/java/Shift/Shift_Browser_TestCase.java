@@ -1,4 +1,4 @@
-package Shift_Test;
+package Shift;
 
 import Utilities.Constants;
 import com.aventstack.extentreports.Status;
@@ -36,7 +36,8 @@ public class Shift_Browser_TestCase extends BaseTest
             driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
             logger.log(Status.INFO, "Entering Shift url");
-            driver.get(Constants.urls); //accessing the url
+            driver.get(Constants.urls); //accessing the
+            // url
             logger.log(Status.INFO, "Verifying the url");
             if (driver.getCurrentUrl().contains("shift")) {
                 System.out.println("url is correct");

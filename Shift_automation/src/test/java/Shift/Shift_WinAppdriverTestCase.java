@@ -1,4 +1,4 @@
-package Shift_Test;
+package Shift;
 
 import Utilities.Constants;
 import Utilities.WinDriver;
@@ -8,9 +8,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.ui.context.Theme;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
